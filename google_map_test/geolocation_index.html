@@ -31,6 +31,7 @@
           center: {lat: -34.397, lng: 150.644},
           zoom: 6
         });
+
         var infoWindow = new google.maps.InfoWindow({map: map});
 
         // Try HTML5 geolocation.
@@ -44,6 +45,14 @@
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             map.setCenter(pos);
+
+            var marker = new google.maps.Marker({
+              position: pos,
+              map: map
+            });
+            
+            // http://stackoverflow.com/questions/6764917/latitude-and-longitude-can-find-zip-code
+
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
           });
@@ -56,7 +65,7 @@
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
         infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
+                              'Error: The What the fuck.' :
                               'Error: Your browser doesn\'t support geolocation.');
       }
     </script>
@@ -65,3 +74,5 @@
     </script>
   </body>
 </html>
+
+
