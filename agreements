@@ -1,0 +1,38 @@
+
+WE WILL BE TALKING TOMORROW.
+
+What will our domain name be?	
+http://curbn.herokuapp.com/
+We are using heroku
+
+What will front end do?
+Jeremy, look into bootstrap and look into our templates
+Look into Oauth Authentication, this is for login and stuff
+
+
+Back end language we are using is nodejs right?
+That’ll be done in postgresql
+Need to figure out how to get stuff working with aws services
+
+
+What are you doing, DInorah?
+Working on Postgresql
+What do you need help with?
+
+Things needing to be done:
+Google Map API
+Gas station price pulling, so we can calculate fairness in gas prices. We should all work with this.
+Adding information to a feed, how do we that? 
+•	We can do this by geo tag location, and event type.
+•	And if an object is inserted or deleted from the database, then we should have a trigger flag that will pop up due to that creation.
+
+
+
+
+Our Dynamic Data is Eventbrite, it will search through stuff every few data to crawl for things.
+Also dynamic feed is like gas price is done.
+Also will check if event is expired or if event has no tickets
+After Thursday, we can focus on our report.
+This is USA based stuff 
+
+We will work on verification link later this 
