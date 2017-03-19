@@ -1,3 +1,11 @@
+<!-- 
+https://developers.google.com/maps/documentation/geocoding/start#reverse
+https://developers.google.com/maps/documentation/geocoding/intro
+https://developers.google.com/maps/documentation/geocoding/intro#ReverseGeocoding
+http://stackoverflow.com/questions/34487077/how-do-i-get-the-postal-code-from-google-maps-autocomplete-api
+ -->
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -43,14 +51,21 @@
             };
 
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
+            //this will give us our lat and long
+            infoWindow.setContent('Location found \n.' + pos.lng + " " + pos.lat);
+
+            infoWindow.setContent("Testing for stuff now " + position)
             map.setCenter(pos);
+
+            //Need to figure out how to get the zipcode now.
+
+
 
             var marker = new google.maps.Marker({
               position: pos,
               map: map
             });
-            
+
             // http://stackoverflow.com/questions/6764917/latitude-and-longitude-can-find-zip-code
 
           }, function() {

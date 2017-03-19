@@ -1,0 +1,64 @@
+<!-- 
+http://stackoverflow.com/questions/36085722/using-initmap-and-initautocomplete-on-same-html-page-google-maps
+ -->
+
+<!DOCTYPE html>
+<html>
+	<link rel = "stylesheet" href = "D_request.css" type = "text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <title>Driver Request</title>
+</head>
+
+<body>
+    <h1>Driving Request</h1>
+    <h3><u>Directions:</u></h3>
+    <div id="right-panel"></div>
+    <div id="map"></div>
+    
+    <br/>
+
+    <div class="form-group">
+      <label>Start Address:</label>
+      <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    </div>
+    <div class="form-group">
+      <label>Destination:</label>
+      <input id="pac-input2" class="controls" type="text" placeholder="Search Box">
+    </div><br/>
+    <div class = "wrapper">
+      <input type = "button" value = "Map Preview" onclick="initMap()">
+    </div>
+    <h3><u>Seats:</u></h3>
+    <!-- <p class = "amount">
+      Number of Seats Open:&nbsp<input class = "seats" type = "number" min = 1 max = 9 required>
+     --></p>
+    <div class = "wrapper">
+      <input type = "submit" value = "Submit">
+    </div>
+  </form>
+</body>
+    <script type="text/javascript" src= "../js/search.js"></script>
+    <script type="text/javascript" src="../js/search_route.js">
+      function initialize() {
+           initMap();
+           initAutoComplete();
+        }
+    </script>
+    <!-- <script src = "./jerm_js.js"></script> -->
+<!--     <script 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeBlgj7SUOs6HcWIFuMZi33lL3dZNS6JU&libraries=places&callback=initialize" async defer>
+        
+    </script>
+ -->
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeBlgj7SUOs6HcWIFuMZi33lL3dZNS6JU&libraries=places&callback=initAutocomplete">
+    </script>
+
+<!--     <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeBlgj7SUOs6HcWIFuMZi33lL3dZNS6JU&callback=initMap">
+    </script> -->
+</html>
